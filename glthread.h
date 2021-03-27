@@ -28,7 +28,7 @@ glthread_remove(glthread_t *lst, glthread_node_t *glnode);
 #define ITERATE_GL_THREADS_BEGIN(lsptr, struct_type, ptr)	\
 {								\
 	glthread_node_t *_glnode = NULL, *_next = NULL;		\
-	for(_glnode = lsptr->head; -glnode; _gload = _next){	\
+	for(_glnode = lsptr->head; _glnode; _glnode = _next){	\
 	_next = _glnode->right;					\
 	ptr = (struct_type *)((char *)_glnode - lsptr->offset);	
 
